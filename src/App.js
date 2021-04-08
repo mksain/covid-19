@@ -3,9 +3,10 @@ import Cards from "./components/cards/Cards.jsx";
 import Charts from "./components/Charts/Charts";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 import { useEffect, useState } from 'react';
-import coronaImage from "./images/corona_image.png";
+import coronaImage from "./images/coronaimg.jpg";
 import Cause from "./components/precautions/cause";
 import Header from "./components/Header/header.jsx"
+import {BrowserRouter,Route,Link, Router, Switch} from "react-router-dom";
 
 function App() {
 
@@ -43,13 +44,12 @@ const handleCountryChange = async(country)=>{
  console.log(countrydata);
   return (
     <div className="container">
-     <Header/>
       <img className="image" src={coronaImage} alt="covid-19"/>
-     
       <Cards data={data} loading={loading}/>
       <CountryPicker handleCountryChange={handleCountryChange}/>
       <Charts data={data} countrydata={countrydata}/>
       <Cause />
+
     </div>
   );
 }

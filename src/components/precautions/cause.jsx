@@ -9,7 +9,7 @@ import "./cause.css";
 
 const cause=()=>{
    return(
-       <div className="container">
+       <div className="">
            <div className="section_header text-center">
              <h2>6 Steps Prevention Against Coronavirus</h2>
            </div>

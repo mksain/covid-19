@@ -12,7 +12,7 @@ const Cards=({data,loading})=>{
      
     return(
     <div className="container">
-            <Grid container spacing={3} justify="center">
+            <Grid container spacing={2} justify="center">
                 <Grid item component={Card} xs={12} md={3} className="card infected">
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>Infected</Typography>
