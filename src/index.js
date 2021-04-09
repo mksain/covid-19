@@ -3,14 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Appy from './Appy';
 import reportWebVitals from './reportWebVitals';
-import Header from "./components/Header/header";
-import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+   
     <Appy/>
-    </BrowserRouter>
    
   </React.StrictMode>,
   document.getElementById('root')
