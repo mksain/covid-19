@@ -17,6 +17,7 @@ function Appy() {
    
          <Route exact path="/" component={App}/>
          <Route exact path="/indiadetail" component={India}/>
+         <Route exact path="/covid-19" component={App}/>
          
      </Router>
      <Footer/>
