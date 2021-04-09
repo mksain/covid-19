@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const header=()=>{
     return(
         <div className="" style={{width:"100%"}}>
@@ -12,8 +11,6 @@ const header=()=>{
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          
-          
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="/indiadetail">India detail</a>
           </li>

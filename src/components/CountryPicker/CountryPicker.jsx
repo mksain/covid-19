@@ -7,12 +7,17 @@ import {fetchCountries} from "../../api";
 const CountryPicker=({handleCountryChange})=>{
 
 const [fetchedCountries,setfetchedCountries]=useState([]);
+const [loading, setLoading] = useState([false]);
 
 
 useEffect(()=>{
     const fetchAPI=async()=>{
-        
-        setfetchedCountries(await fetchCountries());
+        try {
+            setfetchedCountries(await fetchCountries());
+            setLoading(false);
+        } catch (error) {
+            setLoading(true);
+        }
        
     }
    
@@ -20,10 +25,16 @@ useEffect(()=>{
     fetchAPI();
 },[setfetchedCountries]);
 
+if (loading) {
+    return <h2>Loading...</h2>;
+  }
+
     return(
+       
         <FormControl className="formControl">
             <NativeSelect defaultValue="" onChange={(e)=>handleCountryChange(e.target.value)}>
                 <option value="">Global</option>
+
                 {fetchedCountries.map((country,i)=><option key={i} value={country}>{country}</option>)}
             </NativeSelect>
         </FormControl>

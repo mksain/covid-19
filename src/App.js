@@ -5,8 +5,6 @@ import CountryPicker from "./components/CountryPicker/CountryPicker";
 import { useEffect, useState } from 'react';
 import coronaImage from "./images/coronaimg.jpg";
 import Cause from "./components/precautions/cause";
-import Header from "./components/Header/header.jsx"
-import {BrowserRouter,Route,Link, Router, Switch} from "react-router-dom";
 
 function App() {
 
@@ -37,7 +35,6 @@ function App() {
 const handleCountryChange = async(country)=>{
   
    setcountrydata(country);
-   
  }
 
  console.log(data);
@@ -48,8 +45,8 @@ const handleCountryChange = async(country)=>{
       <Cards data={data} loading={loading}/>
       <CountryPicker handleCountryChange={handleCountryChange}/>
       <Charts data={data} countrydata={countrydata}/>
-      <Cause />
-
+      <Cause/>
+      
     </div>
   );
 }
